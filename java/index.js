@@ -76,13 +76,13 @@ function calli() {
         document.querySelector("#first").style.display="none"
         document.querySelector(".secound").style.display="none"
         document.querySelector(".threed").style.display="flex"
-        //     var threed = document.querySelector("#rangeii").value 
-        // if(threed < "70000$"){
-           
-        // }else{
+            var threed = document.querySelector("#rangeii").value 
+        if(threed < "70000$"){
+           alert("hellow")
+        }else{
             
-           
-        // }
+           alert("world")
+        }
         
         }
             
