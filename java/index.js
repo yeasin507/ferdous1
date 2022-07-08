@@ -1,89 +1,49 @@
-var hamburger = document.querySelector(".hamburger");
-var hamburgerMenu = document.querySelector(".hamburger_menu");
-hamburger.addEventListener("click", mobileMenu);
+let index = 0,
+    interval = 1000;
 
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    hamburgerMenu.classList.toggle("header_menu");
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
 }
 
-
-
-
-
-var slider = document.querySelector(".range")
-var values = document.querySelector(".value")
-
-values.textContent = slider.value;
-slider.oninput = function (){
-    values.textContent = this.value + "$";
+for(const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star);
+    
+    setInterval(() => animate(star), 1000);
+  }, index++ * (interval / 3))
 }
 
-var slideri = document.getElementById("rangei")
-var valuesi = document.getElementById("ui")
+/* -- ↓↓↓ If you want the sparkle effect to only occur on hover, replace lines 16 and on with this code ↓↓↓ -- */
 
-valuesi.textContent = slideri.value;
-slideri.oninput = function (){
-    valuesi.textContent = this.value + "$";
-}
+// let timeouts = [],
+//     intervals = [];
 
-var sliderii = document.getElementById("rangeii")
-var valuesii = document.getElementById("uii")
+// const magic = document.querySelector(".magic");
 
-valuesii.textContent = sliderii.value;
-sliderii.oninput = function (){
-    valuesii.textContent = this.value + "$";
-}
-
-
-// var x = document.getElementById("price_input").value;
-var y =document.querySelector(".value");
-// var o =document.querySelector(".range::-webkit-slider-thumb")
-// if (x == 10) {
-//     console.log("true")
-// }else{console.log("flase")}
-
-
-document.querySelector("#range").addEventListener("click",call);
-document.querySelector("#rangei").addEventListener("click",calli);
-document.querySelector("#rangeii").addEventListener("click",callii);
-
-function call() {
-//    window.history.back()
-// alert(location.href)
-// alert("helo")
-// if(confirm("are you sure"))
-    // location.href = "https://www.youtube.com/results?search_query=how+make+auto+maltiflu+calculator+javascript"
- 
-    // var first = document.querySelector("#range").value 
-    document.querySelector("#first").style.display="flex"
-    document.querySelector(".secound").style.display="none"
-    document.querySelector(".threed").style.display="none"
-        
-        
-        }
-       
-        
-
-function calli() {
-        document.querySelector("#first").style.display="none"
-        document.querySelector(".secound").style.display="flex"
-        document.querySelector(".threed").style.display="none"
-        // var secound = document.querySelector("#rangei").value 
+// magic.onmouseenter = () => {
+//   let index = 1;
   
-}
-    function callii() {
-        document.querySelector("#first").style.display="none"
-        document.querySelector(".secound").style.display="none"
-        document.querySelector(".threed").style.display="flex"
-            var threed = document.querySelector("#rangeii").value 
-        if(threed < "70000$"){
-           alert("hellow")
-        }else{
-            
-           alert("world")
-        }
-        
-        }
-            
+//   for(const star of document.getElementsByClassName("magic-star")) {
+//     timeouts.push(setTimeout(() => {  
+//       animate(star);
+      
+//       intervals.push(setInterval(() => animate(star), 1000));
+//     }, index++ * 300));
+//   };
+// }
 
+// magic.onmouseleave = onMouseLeave = () => {
+//   for(const t of timeouts) clearTimeout(t);  
+//   for(const i of intervals) clearInterval(i);
+  
+//   timeouts = [];
+//   intervals = [];
+// }

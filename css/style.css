@@ -1,185 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Love+Light&family=Lovers+Quarrel&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Rubik+Microbe&family=Ubuntu:ital,wght@0,400;0,500;1,400&display=swap');
 
-*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Beau Rivage', cursive;;}
-.common_wrap{margin: 0 auto;max-width: 1900px;padding: 0 20px;}
-.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
-main{float: left;width: 100%;}
-a{text-decoration: none;}
-.red{color: rgb(191, 16, 16);font-family: 'Rubik Microbe', cursive;}
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Tangerine&display=swap');
 
-/* ==== loding ==== */
-
-.loding{
-    float: left;
-    width: 100vw;  
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    animation-name:opa;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-.loding img{
-    width: 30%;
-    animation-name:wolf;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-}
-@keyframes wolf{
-    0%{transform: rotateY(360deg);}
-}
-@keyframes opa{
-    0%{opacity: 1;}
-    10%{opacity: 1;}
-    30%{opacity: 1;}
-    70%{opacity: 1;}
-    100%{opacity: 0;}
-}
-.section{float: left;width: 100%;margin-top: -7000px; animation:opaes 2s 1 4s forwards ease-in-out;opacity: 0;}
-.header_section{float: left;width: 100%;}
-.header_section_cont{
-    float: left;width: 100%;
-}
-.header_section_cont h3{font-size: 20px;text-align: center;}
-
-
-@keyframes opaes{
-    0%{margin-top: 0; }
-    10%{margin-top: 0; }
-    50%{margin-top: 0; }
-    90%{margin-top: 0; }
-    100%{margin-top: 0;opacity: 1;}
-}
-.none{float: left;width: 100%;position: absolute;top:0;left: 0; z-index: 111;animation:opae 0.01s 1 4s forwards;}
-
-@keyframes opae{
-    100%{width: 0px;overflow: hidden;}
-}
-.sorry{float: left;width: 100%;}
-.sorry h1{text-align: center;font-size: 40px; font-family: 'Rubik Microbe', cursive;color: rgb(232, 41, 20);margin-top: 50px; margin-bottom: 40px;}
-.hero_content {float: left;width: 100%;}
-.hero_content h4{text-align: center;margin-top: 30px;font-size: 30px; font-family: 'Beau Rivage', cursiv;margin-bottom: 100px;}
-/* hero section */
-
-.hero_section{float: left;width: 100%;}
-.hero_img{max-width: 320px;margin: 0 auto;}
-.hero_img img{width: 100%; margin-top: 60px;}
-.boy_girl{float: left;width: 100%; background-color:  #c1b399;position: relative;}
-.boy_girl::after{content: "";width: 100%;height: 50px;position: absolute; top: -48px;left: 0;background: linear-gradient(180deg,#ffffff,  #c1b399 );z-index: -1;}
-.canter{margin: 0 auto;max-width: 350px;margin-top: 200px;}
-.canter p{font-size: 20px;font-family: 'PT Sans', sans-serif;color: #f10050;}
-.boy{float: left;width: 50%;position: relative;}
-.boy img{float: left;width: 100%;height: 450px;}
-.girl{float: right;width: 50%;}
-.girl img{float: right;width: 100%;height: 450px;}
-
-
-.box1,.box2,.box3,.box4,.box5,.box6,.box7{display: flex;justify-content: center;align-items: center;clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 41% 76%, 11% 99%, 18% 76%, 0 76%);}
-.box1{position: absolute;top:10px;left: 0; width: 60px;height: 60px;background-color: #ffffff;transform: rotate(-45deg);
-    animation: box1  5s infinite;
+:root {  
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(93, 0, 255);
+    --pink: rgb(255, 0, 85);
+  }
+  
+  @keyframes background-pan {
+    from {
+      background-position: 0% center;
     }
-
-    .box2{position: absolute;top:0;left: 20px; width: 50px;height: 50px;background-color: #ffffff;transform: rotate(-45deg);
-        animation: box2 10s 2s infinite;
-        }
-
-        .box3{position: absolute;top:0px;left: 40px; width: 50px;height: 50px;background-color: #ffffff;transform: rotate(-45deg);
-            animation: box3 10s 1s infinite;
-            }
-
-            .box4{position: absolute;top:0;left: 100px; width: 60px;height: 60px;background-color: #ffffff;transform: rotate(-45deg);
-                animation: box4 10s 2s infinite;
-               }
-
-               .box5{position: absolute;top:40px;left: 50px; width: 50px;height: 50px;background-color: #ffffff;transform: rotate(-45deg);
-                animation: box5 10s 1s infinite;
-                }
-
-                .box6{position: absolute;top:60px;left: 70px; width: 50px;height: 50px;background-color: #ffffff;transform: rotate(-45deg);
-                    animation: box6 10s 3s infinite;
-                   }
-
-                   .box7{position: absolute;top:20px;left: 120px; width: 60px;height: 60px;background-color: #ffffff;transform: rotate(-45deg);
-                    animation: box7 10s 2s infinite;
-                   }
-                   
-@keyframes box1{
-    to{ top: -100px;}
-    0%{transform: translateY(0);transform: rotate(-45deg);opacity: 0;}
-    40%{ opacity: 1;}
-    70%{ opacity: 1;}
-    100%{transform: translateY(0);transform: rotate(-45deg);opacity: 0;}
-}
-@keyframes box2{
-    to{top: -190px;}
-    0%{opacity: 0;}
-    50%{opacity: 1;}
-    100%{opacity: 0;}
-}
-@keyframes box3{
-    to{top: -150px;}
-    0%{opacity: 0;}
-    50%{opacity: 1;}
-    100%{opacity: 0;}
-}
-@keyframes box4{
-    to{top: -190px;}
-    0%{opacity: 0;}
-    50%{opacity: 1;}
-    100%{opacity: 0;}
-}
-@keyframes box5{
-    to{top: -100px;}
-    0%{opacity: 0;}
-    50%{opacity: 1;}
-    100%{opacity: 0;}
-}
-@keyframes box6{
-    to{top: -100px;}
-    0%{opacity: 0;}
-    50%{opacity: 1;}
-    100%{opacity: 0;}
-}
-@keyframes box7{
-    to{top: -100px;}
-    0%{opacity: 0;}
-    50%{opacity: 1;}
-    100%{opacity: 0;}
-}
-.oggy{float: left;max-width: 360px;position: relative;margin-top: 200px;margin-bottom: 40px;}
-.oggy img{float: left;width:100%;margin-bottom: 20px;}
-/*==== hover olivia==== */
-.oggy::after{content: "ato vab nes ke bollam to sorry 😒😒"; position:absolute;top: -190px;left: 0; height: 150px;max-width: 200px;clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 76% 76%, 88% 99%, 48% 76%, 0 76%);font-family: 'Lovers Quarrel', cursive;background-color: rgb(167, 235, 168);display: flex;justify-content: center;font-size: 40px;padding: 20px;opacity: 0;transition: 0.3s ease-in-out;}
-.oggy:hover::after{opacity: 1;}
-.to{font-family: 'PT Sans', sans-serif;color: cadetblue;}
-.hover-box-oggy h2{color: #ea0b5d;}
-.maru{float: left;width: 100%;}
-.maru h2{color: #ea0b0b;font-family: 'Rubik Microbe', cursive;}
-.marqu{color: #d70bea;font-family: 'Rubik Microbe', cursive; }
-
-
-@media only screen and (min-width: 768px){
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="search"],
-    input[type="number"],
-    input[type="submit"],
-    input[type="password"],
-    select,
-    textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
-    .oggy{float: left;max-width: 360px;position: relative;margin: 0 auto; margin-top: 200px;margin-bottom: 40px;}
+    
+    to {
+      background-position: -200% center;
+    }
+  }
+  
+  @keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    
+    to {
+      transform: rotate(180deg);
+    }
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    overflow: hidden;
+    place-items: center;
+    background-image: url(../img/abstract-background-with-squares_23-2148995948.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
   }
 
-  @media only screen and (min-width: 580px)  {
-    input[type="text"],input[type="email"],input[type="tel"],input[type="search"],input[type="number"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+  
+  h1 {
+    color: rgb(28, 2, 2);
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(2em, 2vw, 4em);
+    font-weight: 400;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+  }
+  
+  h1 > .magic {
+    display: inline-block;
+    position: relative;
+  }
+  
+  h1 > .magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+    
+    animation: scale 700ms  ease forwards;
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+  }
+  
+  h1 > .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+  }
+  
+  h1 > .magic > .magic-star > svg > path {
+    fill: var(--violet);
+  }
+  
+  h1 > .magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+      to right,
+      var(--purple),
+      var(--violet),
+      var(--pink),
+      var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+  
+  /* -- YouTube Link Styles -- */
+  
+  
+  
+  .meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 600ms, border-color 600ms;
+    z-index: 10000;
+  }
+  
+  .meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .meta-link > i, .meta-link > span {
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  .meta-link > span {
+    color: rgb(255, 0, 132);
+    font-family: "Rubik", sans-serif;
+    transition: color 600ms;
+  }
 
-    .oggy{float: none; margin: 0 auto;}
-    .oggy img{margin-top: 200px;}
-
-}
+  .throw{position: absolute;right: 0;bottom: 0;font-family: 'Tangerine', cursive;}
+  .throws{position: absolute;right: 0;top: 87px;font-family: 'Tangerine', cursive;}
+  .throwse{position: absolute;left: 0;top: 0;}
+  .throwser{position: absolute;left: -10px;bottom: 0;}
+  .throw{font-size: 22px;}
